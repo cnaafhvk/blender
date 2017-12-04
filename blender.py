@@ -11,7 +11,7 @@ from threading import Thread
 
 from toolkit.monitors import ItemConsumer
 from toolkit.managers import ExceptContext, Blocker
-from toolkit import groupby, duplicate, load_function as load_class
+from toolkit import groupby, duplicate, load_class
 
 
 class Blender(ItemConsumer):

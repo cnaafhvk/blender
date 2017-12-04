@@ -20,5 +20,5 @@ RUN pip3.6 install requests -i https://pypi.douban.com/simple
 RUN mkdir /app
 COPY blender.py /app/blender.py
 COPY task_scheduler.py /app/task_scheduler.py
-COPY settings.py /app/task_scheduler.py
+COPY settings.py /app/settings.py
 WORKDIR /app
