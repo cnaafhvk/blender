@@ -15,5 +15,5 @@ libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev
 RUN tar zxvf Python-3.6.0.tgz
 RUN cd Python-3.6.0 && ./configure --bindir=/bin/
 RUN cd Python-3.6.0 && make && make install
-RUN pip install toolkity -i https://pypi.douban.com/simple
-RUN pip install requests -i https://pypi.douban.com/simple
+RUN pip3.6 install toolkity -i https://pypi.douban.com/simple
+RUN pip3.6 install requests -i https://pypi.douban.com/simple
