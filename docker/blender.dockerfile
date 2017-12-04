@@ -17,3 +17,8 @@ RUN cd Python-3.6.0 && ./configure --bindir=/bin/
 RUN cd Python-3.6.0 && make && make install
 RUN pip3.6 install toolkity -i https://pypi.douban.com/simple
 RUN pip3.6 install requests -i https://pypi.douban.com/simple
+RUN mkdir /app
+COPY blender.py /app
+COPY task_scheduler.py /app
+COPY settings.py /app
+WORKDIR /app
