@@ -35,10 +35,10 @@ class Blender(ItemConsumer):
 
     def retrieve_messages(self):
         while self.alive:
-            if not self.consume(callback=self._retrieve_message, errorback=self.errorback):
+            if not self.consume(callback=self._retrieve_message, errback=self.errback):
                 time.sleep(1)
 
-    def errorback(self, message):
+    def errback(self, message):
         for tp in self.consumer.assignment():
             if tp.partition == message.partition:
                 self.consumer.seek(tp, message.offset-1)
